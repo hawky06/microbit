@@ -1,6 +1,7 @@
 #Jingle Bells
-
 from microbit import *
+
+
 import music
 music.set_tempo(ticks=4, bpm=120)
 jingle = [
@@ -22,5 +23,9 @@ jingle = [
  'g:2','g:2','f:2',
  'd:2', 'c:4'
 ]
-music.play(jingle,wait=False,loop=False)
-display.scroll("jingle bells",wait=False,loop=False)
+
+while True:
+    if button_a.is_pressed():
+        music.play(jingle,wait=False,loop=False)
+    elif button_b.is_pressed():
+        display.scroll("jingle bells",wait=False,loop=False)
