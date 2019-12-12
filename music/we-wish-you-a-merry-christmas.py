@@ -9,4 +9,9 @@ wewishyou = ['a5:2', 'd6:4', 'd6:2', 'e6:2',
 'g6:2', 'f#6:2', 'e6:2', 'd6:4', 'b5:4',
 'a5:2', 'b5:2', 'e6:2', 'c#6:2', 'd6:2', 'R:4'
 ]
-music.play(wewishyou,wait=True,loop=False)
+
+while True:
+    if button_a.is_pressed():
+        music.play(wewishyou,wait=False,loop=False)
+    elif button_b.is_pressed():
+        display.scroll("we wish you a merry christmas",wait=False,loop=False)
